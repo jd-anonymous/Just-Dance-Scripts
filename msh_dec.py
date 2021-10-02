@@ -31,7 +31,7 @@ for graphmaterial in os.listdir("input"):
         material["textureBlend"]=struct.unpack('>I',m.read(4))[0]
         material["materialtype"]=struct.unpack('>I',m.read(4))[0]
         material["lightingType"]=struct.unpack('>I',m.read(4))[0]
-        m.read(4)#GFXMaterialShader_Template
+        m.read(4)#matParams
         matparams={}
         matparams["matParams0F"]=struct.unpack('>I',m.read(4))[0]
         matparams["matParams1F"]=struct.unpack('>I',m.read(4))[0]
