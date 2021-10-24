@@ -1,0 +1,40 @@
+{
+    "ALTMAP": [{
+            "MapName": "7RingsALT",
+            "LocaleId": 15243
+        }, {
+            "MapName": "BangarangALT",
+            "LocaleId": 15247
+        }, {
+            "MapName": "GodIsAWomanALT",
+            "LocaleId": 20000819
+        }, {
+            "MapName": "IAmTheBestALT",
+            "LocaleId": 15244
+        }, {
+            "MapName": "KillThisLoveALT",
+            "LocaleId": 15244
+        }, {
+            "MapName": "OldTownRoadALT",
+            "LocaleId": 20000821
+        }, {
+            "MapName": "RainOverMeALT",
+            "LocaleId": 15252
+        }, {
+            "MapName": "SoyYoALT",
+            "LocaleId": 20000822
+        }, {
+            "MapName": "SushiiALT",
+            "LocaleId": 15244
+        }, {
+            "MapName": "TakiTakiALT",
+            "LocaleId": 20000823
+        }, {
+            "MapName": "TalkALT",
+            "LocaleId": 15248
+        }, {
+            "MapName": "TheTimeALT",
+            "LocaleId": 15250
+        }
+    ]
+}
