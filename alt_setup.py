@@ -27,10 +27,10 @@ def raw_text_encode(string: str):
     """
 
     # Decoding our text from unicode
-    decoded_unicode_text = unidecode(string)
+    decoded_unicode_text: str = unidecode(string)
 
     # Encoding our string to bytes
-    bytes_ = decoded_unicode_text.encode()
+    bytes_: bytes = decoded_unicode_text.encode()
 
     # __len__ function can fucked up our encoded raw text
     # if we will use not encoded string in it
@@ -47,10 +47,10 @@ def alt_map_encode(information: dict):
     
     # Encoding our MapName to Just Dance 
     # serialization format
-    encoded_map_name = raw_text_encode(information["MapName"])
+    encoded_map_name: bytes = raw_text_encode(information["MapName"])
 
     # Packing our LocaleID to 4 bytes
-    packed_localeid = struct.pack(">I", information["LocaleId"])
+    packed_localeid: bytes = struct.pack(">I", information["LocaleId"])
 
     return (
         encoded_map_name +
@@ -60,13 +60,13 @@ def alt_map_encode(information: dict):
     )
 
 def main():
-    with open('alt_inject.json', 'rb') as configuration_file:
+    with open("alt_inject.json", "rb") as configuration_file:
         # Reading configuration json
-        configuration_dict = json.load(configuration_file)
+        configuration_dict: dict = json.load(configuration_file)
 
     with open("alt.ckd", "wb") as file:
         # Getting count of alternates
-        count_of_alternates = len(configuration_dict["ALTMAP"])
+        count_of_alternates: int = len(configuration_dict["ALTMAP"])
 
         # Writing & packing count of alternates to 4 bytes
         file.write(
@@ -83,7 +83,7 @@ def main():
         for alternate_information in configuration_dict["ALTMAP"]:
             # Encoding alternate information 
             # to Just Dance serialization format
-            encode_alternate_information = alt_map_encode(alternate_information)
+            encode_alternate_information: bytes = alt_map_encode(alternate_information)
 
             # Writing our encoded alternate information
             file.write(
